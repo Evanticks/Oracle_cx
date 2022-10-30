@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<div class="container">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/datos.css') }}" />
+	<div class="table">
+		<div class="table-header">
+			<div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Datos de personaje</a></div>
+			<div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">Datos de armas</a></div>			
+        </div>
+		<div class="table-content">	
+
+			<div class="table-row">
+				<div class="table-data">
+                {% for i in resultado -%}
+                     {{ i }}
+                {% endfor -%}
+                </div>
+				<div class="table-data">
+
+                </div>
+				<div class="table-data">
+                </div>
+				<div class="table-data">
+                {% for i in resultado2 -%}
+                    {{ i[0] }}
+                {% endfor -%}
+                </div>
+                <div class="table-data">                  
+                </div>
+			</div>
+			
+		</div>	
+	</div>
+</div>
+

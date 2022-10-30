@@ -1,0 +1,24 @@
+{% extends './base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block customCSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+{% block body %}
+<form class="login-form" action="/login" method="POST">
+    <p class="login-text">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-lock fa-stack-1x"></i>
+      </span>
+    </p>
+    <input type="username" name="user" class="login-username" required="true" placeholder="Usuario" />
+    <input type="password" name="pass" class="login-password" required="true" placeholder="Contraseña" />
+    <input type="submit" value="Entrar" class="login-submit" />
+  </form>
+  <a href="#" class="login-forgot-pass">forgot password?</a>
+  <div class="underlay-photo"></div>
+  <div class="underlay-black"></div> 
+{% endblock %}
